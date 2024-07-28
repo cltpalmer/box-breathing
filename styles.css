@@ -50,7 +50,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -60px; /* Position below the circle */
+    bottom: -80px; /* Position below the circle, adjust as needed */
 }
 
 .stop-button::before {
@@ -75,33 +75,17 @@ body {
         transform: scale(1);
         background-color: transparent;
     }
-    12.5% {
-        transform: scale(1.5);
-        background-color: #b388eb;
-    }
     25% {
         transform: scale(1.5);
         background-color: #b388eb;
     }
-    37.5% {
-        transform: scale(1);
-        background-color: transparent;
-    }
     50% {
-        transform: scale(1);
-        background-color: transparent;
-    }
-    62.5% {
-        transform: scale(1);
-        background-color: transparent;
+        transform: scale(1.5);
+        background-color: #b388eb;
     }
     75% {
-        transform: scale(1.5);
-        background-color: #b388eb;
-    }
-    87.5% {
-        transform: scale(1.5);
-        background-color: #b388eb;
+        transform: scale(1);
+        background-color: transparent;
     }
     100% {
         transform: scale(1);
