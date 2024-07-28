@@ -69,14 +69,6 @@ const stopBoxBreathing = () => {
     clearInterval(intervalId);
 };
 
-circle.addEventListener('animationstart', () => {
-    startBoxBreathing();
-});
-
-circle.addEventListener('animationend', () => {
-    stopBoxBreathing();
-});
-
 circle.addEventListener('animationiteration', () => {
     startBoxBreathing();
 });
