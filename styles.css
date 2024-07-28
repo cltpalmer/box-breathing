@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: #b388eb;
+    flex-direction: column;
 }
 
 .container {
@@ -43,6 +44,29 @@ body {
     position: absolute;
     font-size: 1.5em;
     font-weight: 400;
+    display: none; /* Initially hidden */
+}
+
+.progress-bar-container {
+    width: 200px;
+    height: 10px;
+    border: 2px solid #b388eb;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #b388eb;
+    transition: width 16s linear;
+}
+
+.stop-text {
+    font-size: 1.5em;
+    color: #b388eb;
+    margin-top: 20px;
     display: none; /* Initially hidden */
 }
 
