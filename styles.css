@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #b388eb;
+}
+
+.container {
+    text-align: center;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #b388eb; /* Thin purple outline */
+    background-color: transparent; /* Transparent fill initially */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+}
+
+.circle.animate {
+    animation: boxBreathe 16s infinite;
+}
+
+.play-button {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #b388eb;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    cursor: pointer;
+}
+
+.inhale-exhale-hold-text {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 400;
+    display: none; /* Initially hidden */
+}
+
+@keyframes boxBreathe {
+    0% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    12.5% {
+        transform: scale(1.5);
+        background-color: #b388eb;
+    }
+    25% {
+        transform: scale(1.5);
+        background-color: #b388eb;
+    }
+    37.5% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    50% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    62.5% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    75% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    87.5% {
+        transform: scale(1.5);
+        background-color: #b388eb;
+    }
+    100% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+}
