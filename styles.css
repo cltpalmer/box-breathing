@@ -51,33 +51,17 @@ body {
         transform: scale(1);
         background-color: transparent;
     }
-    12.5% {
-        transform: scale(1.5);
-        background-color: #b388eb;
-    }
     25% {
         transform: scale(1.5);
         background-color: #b388eb;
     }
-    37.5% {
-        transform: scale(1);
-        background-color: transparent;
-    }
     50% {
-        transform: scale(1);
-        background-color: transparent;
-    }
-    62.5% {
-        transform: scale(1);
-        background-color: transparent;
+        transform: scale(1.5);
+        background-color: #b388eb;
     }
     75% {
         transform: scale(1);
         background-color: transparent;
-    }
-    87.5% {
-        transform: scale(1.5);
-        background-color: #b388eb;
     }
     100% {
         transform: scale(1);
