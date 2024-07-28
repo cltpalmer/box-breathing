@@ -21,23 +21,28 @@ const text = document.querySelector('.inhale-exhale-hold-text');
 let intervalId;
 
 const startBoxBreathing = () => {
-    let timePassed = 0;
+    let phase = 0;
 
     const updateText = () => {
-        if (timePassed === 0) {
-            text.textContent = 'Inhale';
-            text.style.color = 'white';
-        } else if (timePassed === 4) {
-            text.textContent = 'Hold';
-            text.style.color = 'white';
-        } else if (timePassed === 8) {
-            text.textContent = 'Exhale';
-            text.style.color = 'black';
-        } else if (timePassed === 12) {
-            text.textContent = 'Hold';
-            text.style.color = 'black';
+        switch (phase) {
+            case 0:
+                text.textContent = 'Inhale';
+                text.style.color = 'white';
+                break;
+            case 1:
+                text.textContent = 'Hold';
+                text.style.color = 'white';
+                break;
+            case 2:
+                text.textContent = 'Exhale';
+                text.style.color = 'black';
+                break;
+            case 3:
+                text.textContent = 'Hold';
+                text.style.color = 'black';
+                break;
         }
-        timePassed = (timePassed + 4) % 16;
+        phase = (phase + 1) % 4;
     };
 
     updateText(); // Start the first cycle immediately
