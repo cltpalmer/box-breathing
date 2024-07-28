@@ -50,7 +50,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -80px; /* Position below the circle, adjust as needed */
+    bottom: -100px; /* Position below the circle, adjust as needed */
 }
 
 .stop-button::before {
