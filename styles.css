@@ -7,11 +7,11 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: #b388eb;
-    flex-direction: column;
 }
 
 .container {
     text-align: center;
+    position: relative;
 }
 
 .circle {
@@ -23,8 +23,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+    margin-bottom: 20px; /* Add space below the circle */
 }
 
 .circle.animate {
@@ -40,33 +40,33 @@ body {
     cursor: pointer;
 }
 
+.stop-button {
+    width: 40px;
+    height: 40px;
+    background-color: #b388eb;
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px; /* Position below the circle */
+}
+
+.stop-button::before {
+    content: '■';
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .inhale-exhale-hold-text {
     position: absolute;
     font-size: 1.5em;
     font-weight: 400;
-    display: none; /* Initially hidden */
-}
-
-.progress-bar-container {
-    width: 200px;
-    height: 10px;
-    border: 2px solid #b388eb;
-    border-radius: 5px;
-    margin-top: 20px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #b388eb;
-    transition: width 16s linear;
-}
-
-.stop-text {
-    font-size: 1.5em;
-    color: #b388eb;
-    margin-top: 20px;
     display: none; /* Initially hidden */
 }
 
@@ -75,17 +75,33 @@ body {
         transform: scale(1);
         background-color: transparent;
     }
+    12.5% {
+        transform: scale(1.5);
+        background-color: #b388eb;
+    }
     25% {
         transform: scale(1.5);
         background-color: #b388eb;
     }
+    37.5% {
+        transform: scale(1);
+        background-color: transparent;
+    }
     50% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    62.5% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+    75% {
         transform: scale(1.5);
         background-color: #b388eb;
     }
-    75% {
-        transform: scale(1);
-        background-color: transparent;
+    87.5% {
+        transform: scale(1.5);
+        background-color: #b388eb;
     }
     100% {
         transform: scale(1);
